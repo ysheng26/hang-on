@@ -5,8 +5,9 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	score_label.text = "You Survived For " + str(Global.score) + " Seconds"
-	#
+	var score = Global.score
+	score_label.text = "You Survived For " + str(score) + " Seconds"
+	Global.score = 0
 	#var high_score = load_from_file()
 	#if Global.score > high_score:
 		#save_to_file(Global.score)
